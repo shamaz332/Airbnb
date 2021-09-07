@@ -25,7 +25,7 @@ const Map = ({ searchResult }) => {
       mapStyle="mapbox://styles/shamaz/cktadil8i3q4k18phgl8m0f8t"
       mapboxApiAccessToken={process.env.mapbox_key}
       {...viewPort}
-      onViewportChange={(nextViewPort) => setViewPort(nextViewPort)}
+      onViewPortChange={(nextViewPort) => setViewPort(nextViewPort)}
     >
       {searchResult.map((result) => (
         <div key={result.long}>

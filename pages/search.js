@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 
 const Search = ({ searchResult }) => {
   const router = useRouter();
-  const { location, startDate, endDate, noOfGuests } = router.query;
+  const { location, startDate, endDate, numberOfGuest } = router.query;
   console.log(router.query);
   const formattedStartDate = format(new Date(startDate), "dd MMMM yy");
   const formattedEndDate = format(new Date(endDate), "dd MMMM yy");
@@ -15,12 +15,12 @@ const Search = ({ searchResult }) => {
 
   return (
     <div>
-      <Header placeholder={`${location} | ${range} | ${noOfGuests}`} />
+      <Header placeholder={`${location} | ${range} | ${numberOfGuest}`} />
 
       <main className="flex">
         <section className="flex-grow pt-14 px-6">
           <p className="text-xs">
-            300+ Stays - {range} - for {noOfGuests} guests
+            300+ Stays - {range} - for {numberOfGuest} guests
           </p>
           <h1 className="text-3xl font-semibold mt-2 mb-6">
             Stays in {location}

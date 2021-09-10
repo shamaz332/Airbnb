@@ -43,7 +43,7 @@ const Header = ({placeholder}) => {
         location: searchInput,
         startDate: startDate.toISOString(),
         endDate: endDate.toISOString(),
-        numberOfGuest,
+        numberOfGuest:numberOfGuest,
       },
     });
   };
@@ -100,8 +100,9 @@ const Header = ({placeholder}) => {
             <input
               value={numberOfGuest}
               onChange={(e) => {
-                e.target.value;
+               setNumberOfGuest(e.target.value);
               }}
+              
               min={1}
               type="number"
               className="w-12 pl-2 text-lg outline-none text-red-400"
